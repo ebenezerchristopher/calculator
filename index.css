@@ -1,0 +1,81 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background: aliceblue;
+}
+
+.container {
+  margin: 10rem 5rem 10rem 5rem;
+  background: black;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-rows: auto repeat(5, minmax(0, 1fr));
+  height: 40vh;
+  align-content: stretch;
+  align-items: stretch;
+  gap: 0.1rem;
+  border: 0.4rem solid grey;
+  padding: 0.1rem;
+  font-size: 50;
+  text-align: center;
+}
+
+.container div {
+  padding: 0.5rem;
+  background: white;
+  border-radius: 2px;
+}
+
+.container > .display {
+  display: flex;
+  justify-content: flex-end;
+  background: darkgrey;
+ padding: 0.1rem 0.3rem 0rem 0.1rem ;
+  height: 2.5rem;
+  grid-column-start: 1;
+  grid-column-end: 5;
+  border: 0.1rem solid black;
+  font-size: 180%;
+  font-weight: 700;
+
+}
+
+.zero {
+  grid-row-start: 6;
+  grid-row-end: 7;
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.container > .yellow {
+  background: #e8a400;
+  grid-column-start: 4;
+}
+
+.container > .yellow.a {
+  grid-row-start: 2;
+}
+.container > .yellow.b {
+  grid-row-start: 3;
+}
+.container > .yellow.c {
+  grid-row-start: 4;
+}
+.container > .yellow.d {
+  grid-row-start: 5;
+}
+.container > .yellow.e {
+  grid-row-start: 6;
+}
+
+.container > .blue {
+  background: #1865cc;
+}
+
+.container > .deepblue {
+  background: #295a61;
+}
